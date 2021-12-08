@@ -6,3 +6,22 @@
     width: 500px;
     height: 400px;
 }
+
+.home__form {
+    display: flex;
+    margin-left: 10rem;
+    /* align-items: center; */
+    /*justify-content: center;*/
+    width: 80%;
+    height: 100%;
+}
+
+.home__map {
+    display: flex;
+}
+
+.w-50 {
+    margin-left: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem
+}

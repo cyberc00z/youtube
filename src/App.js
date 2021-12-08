@@ -1,11 +1,21 @@
 import React from 'react';
 import './App.css';
+
 import Home from './components/Home';
-import { Navbar,Nav,NavDropdown, Container } from 'react-bootstrap';
+import Login from './components/Login';
+import Register from "./components/Register";
+import ForgetPassword from './components/ForgetPassword';
+
+import { Navbar,Nav,Container } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
+//import {Switch} from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="app">
+
      <Navbar bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home">Youtube-Automation</Navbar.Brand>
@@ -19,8 +29,15 @@ function App() {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-       <Home />
+      
+     <Routes>
+       <Route exact path="/" element={<Home />} />
+       <Route  path="/login" element={<Login />} />
+       <Route path="/register" element={<Register />} /> 
+       <Route path="/forget-password" element={<ForgetPassword />} />
+     </Routes>  
     </div>
+    </BrowserRouter>
   );
 }
 
